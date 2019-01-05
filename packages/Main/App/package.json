@@ -1,0 +1,41 @@
+{
+    "name": "@brainglitch/main-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "lib/App.js",
+    "module": "lib/App.esm.js",
+    "types": "./lib/app.d.ts",
+    "scripts": {
+        "clean": "rimraf lib",
+        "dev": "npm run clean && rollup -c -w",
+        "build": "npm run clean && rollup -c",
+        "bundle:all": "npm run clean && rollup -c --environment BUNDLE:ALL ",
+        "run": "node lib/App.js",
+        "test": "jest --coverage",
+        "lint": "tslint -p ./tsconfig.json --format stylish --fix",
+        "prettier": "prettier --write \"src/**/*.?(ts|tsx)\""
+    },
+    "author": "Alejandro Corsino",
+    "license": "",
+    "dependencies": {
+        "@brainglitch/core": "^1.0.0",
+        "ramda": "^0.26.1",
+        "rxjs": "^6.3.3",
+        "core-js": "^2.5.7"
+    },
+    "peerDependencies": {},
+    "devDependencies": {
+        "@brainglitch/utilities-build-tools": "^1.0.0",
+        "@types/core-js": "^2.5.0",
+        "@types/jest": "^23.3.9",
+        "jest": "^23.6.0",
+        "rimraf": "^2.6.2",
+        "rollup": "^0.67.0",
+        "rollup-plugin-typescript2": "^0.17.2",
+        "rollup-plugin-commonjs": "^9.2.0",
+        "rollup-plugin-node-resolve": "^3.4.0",
+        "rollup-plugin-auto-external": "^2.0.0",
+        "ts-jest": "^23.10.4",
+        "typescript": "^3.1.4"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "defaultSeverity": "error",
+    "extends": ["tslint:latest", "tslint-config-prettier"],
+    "rulesDirectory": ["tslint-plugin-prettier"],
+    "linterOptions": {
+        "exclude": ["__tests__/**", "**/node_modules/**"]
+    },
+    "rules": {
+        "prettier": true,
+        "only-arrow-functions": false,
+        "no-submodule-imports": false,
+        "no-console": {
+            "severity": "error",
+            "options": ["debug", "time", "timeEnd", "trace"]
+        }
+    }
+}

@@ -1,0 +1,27 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+#Project specifics
+lib
+**/Main/**/build
+
+#Tools
+.cache
+.rpt2_cache
+
+#Logs
+npm-debug.log*
+lerna-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+#Jest coverage
+coverage
+
+#misc
+packpackage-lock.json
+
+#IDEs
+.vscode

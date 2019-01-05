@@ -1,0 +1,48 @@
+{
+    "name": "@brainglitch/ui-components",
+    "version": "1.0.0",
+    "description": "",
+    "main": "lib/main.js",
+    "types": "./lib/main.d.ts",
+    "scripts": {
+        "clean": "rimraf lib",
+        "dev": "npm run clean && rollup -c -w",
+        "build": "npm run clean && rollup -c",
+        "ts-check": "tsc --noEmit",
+        "ts-check:watch": "npm run ts-check -- --watch",
+        "ts:types": "tsc --emitDeclarationOnly",
+        "ts:build:all": "npm run clean && tsc --build",
+        "storybook": "start-storybook -p 9001 -c ./storybook",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "tslint -p ./tsconfig.json --format stylish --fix",
+        "prettier": "prettier --write \"src/**/*.?(ts|tsx)\""
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "react": "^16.6.0",
+        "react-dom": "^16.6.0",
+        "underscore": "^1.9.1"
+    },
+    "devDependencies": {
+        "@storybook/addon-actions": "^4.0.2",
+        "@storybook/react": "^4.0.2",
+        "@types/jest": "^23.3.9",
+        "@types/react": "^16.4.18",
+        "@types/react-dom": "^16.0.9",
+        "autoprefixer": "^9.3.1",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^8.0.4",
+        "jest": "^23.6.0",
+        "rimraf": "^2.6.2",
+        "rollup": "^0.67.0",
+        "rollup-plugin-postcss": "^1.6.2",
+        "rollup-plugin-typescript2": "^0.17.2",
+        "rollup-plugin-auto-external": "^2.0.0",
+        "stylus": "^0.54.5",
+        "ts-jest": "^23.10.4",
+        "ts-loader": "^5.3.0",
+        "tslib": "^1.9.3",
+        "typescript": "^3.1.4"
+    }
+}

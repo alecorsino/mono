@@ -1,0 +1,43 @@
+{
+    "name": "@brainglitch/core",
+    "version": "1.0.0",
+    "description": "",
+    "main": "lib/main.js",
+    "module": "lib/main.js",
+    "types": "./lib/main.d.ts",
+    "scripts": {
+        "clean": "rimraf lib",
+        "dev": "npm run clean && rollup -c -w",
+        "build": "npm run clean && rollup -c",
+        "coverage": "jest --coverage",
+        "test:watch": "jest --watch",
+        "lint": "tslint -p ./tsconfig.json --format stylish --fix",
+        "prettier": "prettier --write \"src/**/*.?(ts|tsx)\""
+    },
+    "author": "Alejandro Corsino",
+    "license": "",
+    "dependencies": {
+        "@types/ramda": "^0.25.46",
+        "immer": "^1.9.3",
+        "ramda": "^0.26.1",
+        "redux": "^4.0.1",
+        "reselect": "^4.0.0",
+        "rxjs": "^6.3.3"
+    },
+    "devDependencies": {
+        "@types/core-js": "^2.5.0",
+        "@types/jest": "^23.3.9",
+        "jest": "^23.6.0",
+        "prettier": "^1.15.2",
+        "rimraf": "^2.6.2",
+        "rollup": "^0.67.0",
+        "rollup-plugin-auto-external": "^2.0.0",
+        "rollup-plugin-commonjs": "^9.2.0",
+        "rollup-plugin-node-resolve": "^3.4.0",
+        "rollup-plugin-typescript2": "^0.17.2",
+        "ts-jest": "^23.10.4",
+        "tslint-config-prettier": "^1.16.0",
+        "tslint-plugin-prettier": "^2.0.1",
+        "typescript": "^3.1.4"
+    }
+}

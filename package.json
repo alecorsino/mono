@@ -1,0 +1,47 @@
+{
+    "name": "root",
+    "private": true,
+    "workspaces": {
+        "packages": [
+            "packages/**"
+        ],
+        "nohoist": [
+            "**/rxjs",
+            "**/rxjs/**",
+            "**/lint-staged",
+            "**/lint-staged/**",
+            "**/react-scripts",
+            "**/react-scripts/**"
+        ]
+    },
+    "scripts": {
+        "lu": "lernaupdate",
+        "clean": "lerna run clean",
+        "build": "lerna run build",
+        "lint-all": "tslint -c \"./tslint.json\" --format stylish --fix \"**/src/**/*.ts{,x}\""
+    },
+    "devDependencies": {
+        "@types/node": "^10.12.1",
+        "@types/underscore": "^1.8.9",
+        "husky": "^1.2.0",
+        "lerna": "^3.4.3",
+        "lerna-update-wizard": "^0.9.4",
+        "lint-staged": "^8.1.0",
+        "prettier": "^1.15.3",
+        "tslint": "^5.11.0",
+        "tslint-config-prettier": "^1.17.0",
+        "tslint-plugin-prettier": "^2.0.1"
+    },
+    "dependencies": {},
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{ts,tsx}": [
+            "tslint -c \"./tslint.json\" --format stylish --fix",
+            "git add"
+        ]
+    }
+}

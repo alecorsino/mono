@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+      "composite": true,
+      "rootDir": "./stories",
+      "outDir": "./lib",
+      "jsx": "react",
+      "baseUrl":"..",
+      "paths": {
+        "@brainglitch/ui-components/*": [
+            "lib/*"
+        ]
+    }
+
+    },
+    "exclude": ["node_modules", "build", "scripts"],
+    "include": ["stories/**/*","../lib"],
+    
+}
